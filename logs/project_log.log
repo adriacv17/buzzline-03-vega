@@ -2353,3 +2353,911 @@
 2025-01-31 20:16:44.552 | WARNING  | __main__:main:169 - Producer interrupted by user.
 2025-01-31 20:16:44.555 | INFO     | __main__:main:174 - Kafka producer closed.
 2025-01-31 20:16:44.555 | INFO     | __main__:main:176 - END producer.
+2025-01-31 20:25:00.253 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:25:00.256 | INFO     | __main__:<module>:66 - Project root: C:\Users\adria\Projects\buzzline-03-vega
+2025-01-31 20:25:00.256 | INFO     | __main__:<module>:70 - Data folder: C:\Users\adria\Projects\buzzline-03-vega\data
+2025-01-31 20:25:00.256 | INFO     | __main__:<module>:74 - Data file: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:25:00.256 | INFO     | __main__:main:133 - START producer.
+2025-01-31 20:25:00.257 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
+2025-01-31 20:25:00.262 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:79 - Zookeeper is ready at localhost:2181.
+2025-01-31 20:25:00.263 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:25:00.580 | INFO     | utils.utils_producer:check_kafka_service_is_ready:98 - Kafka is ready. Brokers: {'throttle_time_ms': 0, 'brokers': [{'node_id': 1001, 'host': 'localhost', 'port': 9092, 'rack': None}], 'cluster_id': 'L4Jnq_nYTJuUJ4NJJfuPdg', 'controller_id': 1001}
+2025-01-31 20:25:00.581 | INFO     | __main__:get_kafka_topic:48 - Kafka topic: heart_csv
+2025-01-31 20:25:00.581 | INFO     | __main__:get_message_interval:55 - Message interval: 5 seconds
+2025-01-31 20:25:00.582 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:25:00.582 | INFO     | utils.utils_producer:create_kafka_producer:146 - Connecting to Kafka broker at localhost:9092...
+2025-01-31 20:25:00.687 | INFO     | utils.utils_producer:create_kafka_producer:151 - Kafka producer successfully created.
+2025-01-31 20:25:00.688 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:25:01.003 | INFO     | utils.utils_producer:create_kafka_topic:172 - Topic 'heart_csv' already exists. Clearing it out...
+2025-01-31 20:25:01.004 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:25:01.320 | ERROR    | utils.utils_producer:clear_kafka_topic:235 - Error managing retention for topic 'heart_csv': list indices must be integers or slices, not ConfigResource
+2025-01-31 20:25:01.321 | INFO     | __main__:main:156 - Kafka topic 'heart_csv' is ready.
+2025-01-31 20:25:01.321 | INFO     | __main__:main:162 - Starting message production to topic 'heart_csv'...
+2025-01-31 20:25:01.321 | INFO     | __main__:generate_messages:93 - Opening data file in read mode: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:25:01.323 | INFO     | __main__:generate_messages:95 - Reading data from file: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:25:01.324 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:25:01.323855', 'heart_rate': 72.0}
+2025-01-31 20:25:06.325 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:25:06.325672', 'heart_rate': 73.0}
+2025-01-31 20:25:08.914 | WARNING  | __main__:main:169 - Producer interrupted by user.
+2025-01-31 20:25:08.915 | INFO     | __main__:main:174 - Kafka producer closed.
+2025-01-31 20:25:08.915 | INFO     | __main__:main:176 - END producer.
+2025-01-31 20:25:48.185 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:25:48.187 | INFO     | __main__:<module>:66 - Project root: C:\Users\adria\Projects\buzzline-03-vega
+2025-01-31 20:25:48.188 | INFO     | __main__:<module>:70 - Data folder: C:\Users\adria\Projects\buzzline-03-vega\data
+2025-01-31 20:25:48.188 | INFO     | __main__:<module>:74 - Data file: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:25:48.188 | INFO     | __main__:main:133 - START producer.
+2025-01-31 20:25:48.188 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
+2025-01-31 20:25:48.193 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:79 - Zookeeper is ready at localhost:2181.
+2025-01-31 20:25:48.193 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:25:48.515 | INFO     | utils.utils_producer:check_kafka_service_is_ready:98 - Kafka is ready. Brokers: {'throttle_time_ms': 0, 'brokers': [{'node_id': 1001, 'host': 'localhost', 'port': 9092, 'rack': None}], 'cluster_id': 'L4Jnq_nYTJuUJ4NJJfuPdg', 'controller_id': 1001}
+2025-01-31 20:25:48.515 | INFO     | __main__:get_kafka_topic:48 - Kafka topic: heart_csv
+2025-01-31 20:25:48.515 | INFO     | __main__:get_message_interval:55 - Message interval: 5 seconds
+2025-01-31 20:25:48.515 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:25:48.515 | INFO     | utils.utils_producer:create_kafka_producer:146 - Connecting to Kafka broker at localhost:9092...
+2025-01-31 20:25:48.622 | INFO     | utils.utils_producer:create_kafka_producer:151 - Kafka producer successfully created.
+2025-01-31 20:25:48.623 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:25:48.936 | INFO     | utils.utils_producer:create_kafka_topic:172 - Topic 'heart_csv' already exists. Clearing it out...
+2025-01-31 20:25:48.937 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:25:49.251 | ERROR    | utils.utils_producer:clear_kafka_topic:235 - Error managing retention for topic 'heart_csv': list indices must be integers or slices, not ConfigResource
+2025-01-31 20:25:49.252 | INFO     | __main__:main:156 - Kafka topic 'heart_csv' is ready.
+2025-01-31 20:25:49.252 | INFO     | __main__:main:162 - Starting message production to topic 'heart_csv'...
+2025-01-31 20:25:49.252 | INFO     | __main__:generate_messages:93 - Opening data file in read mode: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:25:49.252 | INFO     | __main__:generate_messages:95 - Reading data from file: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:25:49.254 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:25:49.253274', 'heart_rate': 72.0}
+2025-01-31 20:25:54.255 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:25:54.255122', 'heart_rate': 73.0}
+2025-01-31 20:25:59.257 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:25:59.257207', 'heart_rate': 75.0}
+2025-01-31 20:26:04.261 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:26:04.258905', 'heart_rate': 76.0}
+2025-01-31 20:26:09.262 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:26:09.262452', 'heart_rate': 77.0}
+2025-01-31 20:26:14.264 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:26:14.264228', 'heart_rate': 78.0}
+2025-01-31 20:26:19.266 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:26:19.266032', 'heart_rate': 79.0}
+2025-01-31 20:26:19.886 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:26:19.888 | INFO     | __main__:main:160 - START consumer.
+2025-01-31 20:26:19.889 | INFO     | __main__:get_kafka_topic:45 - Kafka topic: heart_csv
+2025-01-31 20:26:19.889 | INFO     | __main__:get_kafka_consumer_group_id:52 - Kafka consumer group id: heart_group
+2025-01-31 20:26:19.889 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:19.889 | INFO     | __main__:main:166 - Consumer: Topic 'heart_csv' and group 'heart_group'...
+2025-01-31 20:26:19.890 | INFO     | __main__:main:167 - Rolling window size: 10
+2025-01-31 20:26:19.890 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:26:19.890 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='heart_csv' and group ID='heart_group'.
+2025-01-31 20:26:20.001 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-01-31 20:26:20.001 | INFO     | __main__:main:175 - Polling messages from topic 'heart_csv'...
+2025-01-31 20:26:20.224 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:16:29.964309', 'heart_rate': 72.0}
+2025-01-31 20:26:20.224 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.225 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:16:34.968904', 'heart_rate': 73.0}
+2025-01-31 20:26:20.225 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.225 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:16:39.970949', 'heart_rate': 75.0}
+2025-01-31 20:26:20.226 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.226 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:25:01.323855', 'heart_rate': 72.0}
+2025-01-31 20:26:20.226 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.227 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:25:06.325672', 'heart_rate': 73.0}
+2025-01-31 20:26:20.227 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.227 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:25:49.253274', 'heart_rate': 72.0}
+2025-01-31 20:26:20.227 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.228 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:25:54.255122', 'heart_rate': 73.0}
+2025-01-31 20:26:20.228 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.228 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:25:59.257207', 'heart_rate': 75.0}
+2025-01-31 20:26:20.228 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.229 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:26:04.258905', 'heart_rate': 76.0}
+2025-01-31 20:26:20.229 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.229 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:26:09.262452', 'heart_rate': 77.0}
+2025-01-31 20:26:20.229 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.230 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:26:20.230 | INFO     | __main__:process_message:137 - STALL DETECTED at 2025-02-01T02:26:09.262452: Heart rate stable at 77.0 BPM over last 10 readings.
+2025-01-31 20:26:20.230 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:26:14.264228', 'heart_rate': 78.0}
+2025-01-31 20:26:20.231 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.231 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:26:20.231 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:26:19.266032', 'heart_rate': 79.0}
+2025-01-31 20:26:20.231 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:20.231 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:26:24.269 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:26:24.268231', 'heart_rate': 80.0}
+2025-01-31 20:26:24.272 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:26:24.268231', 'heart_rate': 80.0}
+2025-01-31 20:26:24.272 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:24.272 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:26:29.270 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:26:29.270312', 'heart_rate': 81.0}
+2025-01-31 20:26:29.273 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:26:29.270312', 'heart_rate': 81.0}
+2025-01-31 20:26:29.273 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:29.273 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:26:34.272 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:26:34.272036', 'heart_rate': 82.0}
+2025-01-31 20:26:34.274 | INFO     | __main__:process_message:125 - Processed JSON message: {'timestamp': '2025-02-01T02:26:34.272036', 'heart_rate': 82.0}
+2025-01-31 20:26:34.274 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:26:34.274 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:26:36.604 | WARNING  | __main__:main:182 - Consumer interrupted by user.
+2025-01-31 20:26:36.611 | INFO     | __main__:main:187 - Kafka consumer for topic 'heart_csv' closed.
+2025-01-31 20:26:38.454 | WARNING  | __main__:main:169 - Producer interrupted by user.
+2025-01-31 20:26:38.455 | INFO     | __main__:main:174 - Kafka producer closed.
+2025-01-31 20:26:38.455 | INFO     | __main__:main:176 - END producer.
+2025-01-31 20:36:25.330 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:36:25.332 | INFO     | __main__:<module>:66 - Project root: C:\Users\adria\Projects\buzzline-03-vega
+2025-01-31 20:36:25.332 | INFO     | __main__:<module>:70 - Data folder: C:\Users\adria\Projects\buzzline-03-vega\data
+2025-01-31 20:36:25.332 | INFO     | __main__:<module>:74 - Data file: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:36:25.333 | INFO     | __main__:main:133 - START producer.
+2025-01-31 20:36:25.333 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
+2025-01-31 20:36:25.339 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:79 - Zookeeper is ready at localhost:2181.
+2025-01-31 20:36:25.339 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:36:25.656 | INFO     | utils.utils_producer:check_kafka_service_is_ready:98 - Kafka is ready. Brokers: {'throttle_time_ms': 0, 'brokers': [{'node_id': 1001, 'host': 'localhost', 'port': 9092, 'rack': None}], 'cluster_id': 'L4Jnq_nYTJuUJ4NJJfuPdg', 'controller_id': 1001}
+2025-01-31 20:36:25.657 | INFO     | __main__:get_kafka_topic:48 - Kafka topic: heart_csv
+2025-01-31 20:36:25.657 | INFO     | __main__:get_message_interval:55 - Message interval: 5 seconds
+2025-01-31 20:36:25.658 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:36:25.658 | INFO     | utils.utils_producer:create_kafka_producer:146 - Connecting to Kafka broker at localhost:9092...
+2025-01-31 20:36:25.763 | INFO     | utils.utils_producer:create_kafka_producer:151 - Kafka producer successfully created.
+2025-01-31 20:36:25.763 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:36:26.077 | INFO     | utils.utils_producer:create_kafka_topic:172 - Topic 'heart_csv' already exists. Clearing it out...
+2025-01-31 20:36:26.078 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:36:26.392 | ERROR    | utils.utils_producer:clear_kafka_topic:235 - Error managing retention for topic 'heart_csv': list indices must be integers or slices, not ConfigResource
+2025-01-31 20:36:26.393 | INFO     | __main__:main:156 - Kafka topic 'heart_csv' is ready.
+2025-01-31 20:36:26.394 | INFO     | __main__:main:162 - Starting message production to topic 'heart_csv'...
+2025-01-31 20:36:26.394 | INFO     | __main__:generate_messages:93 - Opening data file in read mode: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:36:26.394 | INFO     | __main__:generate_messages:95 - Reading data from file: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:36:26.395 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:36:26.394984', 'heart_rate': 72.0}
+2025-01-31 20:36:31.398 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:36:31.397208', 'heart_rate': 73.0}
+2025-01-31 20:36:34.447 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:36:34.449 | INFO     | __main__:main:200 - START consumer.
+2025-01-31 20:36:34.450 | INFO     | __main__:get_kafka_topic:45 - Kafka topic: heart_csv
+2025-01-31 20:36:34.450 | INFO     | __main__:get_kafka_consumer_group_id:52 - Kafka consumer group id: heart_group
+2025-01-31 20:36:34.450 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:36:34.450 | INFO     | __main__:main:206 - Consumer: Topic 'heart_csv' and group 'heart_group'...
+2025-01-31 20:36:34.451 | INFO     | __main__:main:207 - Rolling window size: 10
+2025-01-31 20:36:34.451 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:36:34.451 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='heart_csv' and group ID='heart_group'.
+2025-01-31 20:36:34.563 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-01-31 20:36:34.564 | INFO     | __main__:main:215 - Polling messages from topic 'heart_csv'...
+2025-01-31 20:36:34.879 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:36:26.394984', 'heart_rate': 72.0}
+2025-01-31 20:36:34.879 | ERROR    | __main__:process_message:184 - Error processing message '{"timestamp": "2025-02-01T02:36:26.394984", "heart_rate": 72.0}': cannot access local variable 'high_threshold' where it is not associated with a value
+2025-01-31 20:36:34.881 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:36:31.397208', 'heart_rate': 73.0}
+2025-01-31 20:36:34.881 | ERROR    | __main__:process_message:184 - Error processing message '{"timestamp": "2025-02-01T02:36:31.397208", "heart_rate": 73.0}': cannot access local variable 'high_threshold' where it is not associated with a value
+2025-01-31 20:36:36.400 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:36:36.399933', 'heart_rate': 75.0}
+2025-01-31 20:36:36.403 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:36:36.399933', 'heart_rate': 75.0}
+2025-01-31 20:36:36.404 | ERROR    | __main__:process_message:184 - Error processing message '{"timestamp": "2025-02-01T02:36:36.399933", "heart_rate": 75.0}': cannot access local variable 'high_threshold' where it is not associated with a value
+2025-01-31 20:36:41.401 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:36:41.401507', 'heart_rate': 76.0}
+2025-01-31 20:36:41.404 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:36:41.401507', 'heart_rate': 76.0}
+2025-01-31 20:36:41.404 | ERROR    | __main__:process_message:184 - Error processing message '{"timestamp": "2025-02-01T02:36:41.401507", "heart_rate": 76.0}': cannot access local variable 'high_threshold' where it is not associated with a value
+2025-01-31 20:36:46.403 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:36:46.402495', 'heart_rate': 77.0}
+2025-01-31 20:36:46.405 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:36:46.402495', 'heart_rate': 77.0}
+2025-01-31 20:36:46.406 | ERROR    | __main__:process_message:184 - Error processing message '{"timestamp": "2025-02-01T02:36:46.402495", "heart_rate": 77.0}': cannot access local variable 'high_threshold' where it is not associated with a value
+2025-01-31 20:36:48.728 | WARNING  | __main__:main:222 - Consumer interrupted by user.
+2025-01-31 20:36:48.732 | INFO     | __main__:main:227 - Kafka consumer for topic 'heart_csv' closed.
+2025-01-31 20:36:51.404 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:36:51.404079', 'heart_rate': 78.0}
+2025-01-31 20:36:56.405 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:36:56.405988', 'heart_rate': 79.0}
+2025-01-31 20:36:59.328 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:36:59.331 | INFO     | __main__:main:200 - START consumer.
+2025-01-31 20:36:59.331 | INFO     | __main__:get_kafka_topic:45 - Kafka topic: heart_csv
+2025-01-31 20:36:59.331 | INFO     | __main__:get_kafka_consumer_group_id:52 - Kafka consumer group id: heart_group
+2025-01-31 20:36:59.331 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:36:59.332 | INFO     | __main__:main:206 - Consumer: Topic 'heart_csv' and group 'heart_group'...
+2025-01-31 20:36:59.332 | INFO     | __main__:main:207 - Rolling window size: 10
+2025-01-31 20:36:59.332 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:36:59.332 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='heart_csv' and group ID='heart_group'.
+2025-01-31 20:36:59.442 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-01-31 20:36:59.443 | INFO     | __main__:main:215 - Polling messages from topic 'heart_csv'...
+2025-01-31 20:36:59.768 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:36:51.404079', 'heart_rate': 78.0}
+2025-01-31 20:36:59.768 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:36:59.769 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:36:59.769 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:36:59.770 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:36:56.405988', 'heart_rate': 79.0}
+2025-01-31 20:36:59.770 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:36:59.770 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:36:59.770 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:01.407 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:01.406965', 'heart_rate': 80.0}
+2025-01-31 20:37:01.410 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:01.406965', 'heart_rate': 80.0}
+2025-01-31 20:37:01.410 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:01.411 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:01.411 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:06.409 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:06.409133', 'heart_rate': 81.0}
+2025-01-31 20:37:06.412 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:06.409133', 'heart_rate': 81.0}
+2025-01-31 20:37:06.412 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:06.412 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:06.413 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:11.411 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:11.411426', 'heart_rate': 82.0}
+2025-01-31 20:37:11.414 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:11.411426', 'heart_rate': 82.0}
+2025-01-31 20:37:11.414 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:11.414 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:11.415 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:16.413 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:16.413072', 'heart_rate': 83.0}
+2025-01-31 20:37:16.415 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:16.413072', 'heart_rate': 83.0}
+2025-01-31 20:37:16.416 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:16.416 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:16.416 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:21.414 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:21.414824', 'heart_rate': 84.0}
+2025-01-31 20:37:21.418 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:21.414824', 'heart_rate': 84.0}
+2025-01-31 20:37:21.418 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:21.419 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:21.419 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:26.417 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:26.416702', 'heart_rate': 85.0}
+2025-01-31 20:37:26.420 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:26.416702', 'heart_rate': 85.0}
+2025-01-31 20:37:26.421 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:26.421 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:26.421 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:31.420 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:31.418466', 'heart_rate': 86.0}
+2025-01-31 20:37:31.423 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:31.418466', 'heart_rate': 86.0}
+2025-01-31 20:37:31.423 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:31.424 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:31.424 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:36.421 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:36.421189', 'heart_rate': 87.0}
+2025-01-31 20:37:36.424 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:36.421189', 'heart_rate': 87.0}
+2025-01-31 20:37:36.424 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:36.424 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:36.424 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:36.425 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:37:41.422 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:41.422830', 'heart_rate': 88.0}
+2025-01-31 20:37:41.425 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:41.422830', 'heart_rate': 88.0}
+2025-01-31 20:37:41.425 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:41.425 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:41.425 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:41.425 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:37:46.424 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:46.424309', 'heart_rate': 89.0}
+2025-01-31 20:37:46.428 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:46.424309', 'heart_rate': 89.0}
+2025-01-31 20:37:46.428 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:46.429 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:46.429 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:46.429 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:37:51.427 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:51.426230', 'heart_rate': 90.0}
+2025-01-31 20:37:51.430 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:51.426230', 'heart_rate': 90.0}
+2025-01-31 20:37:51.430 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:51.430 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:51.430 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:51.430 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:37:56.430 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:37:56.428582', 'heart_rate': 91.0}
+2025-01-31 20:37:56.433 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:37:56.428582', 'heart_rate': 91.0}
+2025-01-31 20:37:56.434 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:37:56.434 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:37:56.434 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:37:56.435 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:01.431 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:01.431952', 'heart_rate': 92.0}
+2025-01-31 20:38:01.434 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:01.431952', 'heart_rate': 92.0}
+2025-01-31 20:38:01.434 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:01.435 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:01.435 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:01.435 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:06.435 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:06.434714', 'heart_rate': 93.0}
+2025-01-31 20:38:06.439 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:06.434714', 'heart_rate': 93.0}
+2025-01-31 20:38:06.439 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:06.440 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:06.440 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:06.440 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:11.436 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:11.436851', 'heart_rate': 94.0}
+2025-01-31 20:38:11.439 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:11.436851', 'heart_rate': 94.0}
+2025-01-31 20:38:11.439 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:11.439 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:11.439 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:11.439 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:16.437 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:16.437950', 'heart_rate': 95.0}
+2025-01-31 20:38:16.441 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:16.437950', 'heart_rate': 95.0}
+2025-01-31 20:38:16.441 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:16.442 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:16.442 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:16.442 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:21.440 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:21.439639', 'heart_rate': 96.0}
+2025-01-31 20:38:21.442 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:21.439639', 'heart_rate': 96.0}
+2025-01-31 20:38:21.442 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:21.442 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:21.442 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:21.442 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:26.441 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:26.441596', 'heart_rate': 97.0}
+2025-01-31 20:38:26.444 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:26.441596', 'heart_rate': 97.0}
+2025-01-31 20:38:26.444 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:26.444 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:26.444 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:26.444 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:31.442 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:31.442947', 'heart_rate': 98.0}
+2025-01-31 20:38:31.445 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:31.442947', 'heart_rate': 98.0}
+2025-01-31 20:38:31.446 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:31.446 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:31.446 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:31.446 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:36.444 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:36.444810', 'heart_rate': 99.0}
+2025-01-31 20:38:36.448 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:36.444810', 'heart_rate': 99.0}
+2025-01-31 20:38:36.448 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:36.448 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:36.449 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:36.449 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:41.446 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:41.446259', 'heart_rate': 100.0}
+2025-01-31 20:38:41.449 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:41.446259', 'heart_rate': 100.0}
+2025-01-31 20:38:41.449 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:41.449 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:41.449 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:41.450 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:46.447 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:46.447766', 'heart_rate': 101.0}
+2025-01-31 20:38:46.451 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:46.447766', 'heart_rate': 101.0}
+2025-01-31 20:38:46.451 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:46.451 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:46.451 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:46.452 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:51.449 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:51.449588', 'heart_rate': 102.0}
+2025-01-31 20:38:51.451 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:51.449588', 'heart_rate': 102.0}
+2025-01-31 20:38:51.451 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:51.453 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:51.453 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:51.453 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:38:56.450 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:38:56.450795', 'heart_rate': 103.0}
+2025-01-31 20:38:56.454 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:38:56.450795', 'heart_rate': 103.0}
+2025-01-31 20:38:56.454 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:38:56.455 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:38:56.455 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:38:56.455 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:01.453 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:01.452751', 'heart_rate': 104.0}
+2025-01-31 20:39:01.455 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:01.452751', 'heart_rate': 104.0}
+2025-01-31 20:39:01.456 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:01.456 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:01.456 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:01.456 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:06.455 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:06.454524', 'heart_rate': 105.0}
+2025-01-31 20:39:06.459 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:06.454524', 'heart_rate': 105.0}
+2025-01-31 20:39:06.459 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:06.459 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:06.459 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:06.459 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:11.458 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:11.457049', 'heart_rate': 106.0}
+2025-01-31 20:39:11.461 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:11.457049', 'heart_rate': 106.0}
+2025-01-31 20:39:11.461 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:11.462 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:11.462 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:11.462 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:16.460 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:16.460080', 'heart_rate': 107.0}
+2025-01-31 20:39:16.463 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:16.460080', 'heart_rate': 107.0}
+2025-01-31 20:39:16.463 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:16.463 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:16.463 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:16.463 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:21.461 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:21.461414', 'heart_rate': 108.0}
+2025-01-31 20:39:21.464 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:21.461414', 'heart_rate': 108.0}
+2025-01-31 20:39:21.464 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:21.465 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:21.465 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:21.465 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:26.463 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:26.463381', 'heart_rate': 109.0}
+2025-01-31 20:39:26.466 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:26.463381', 'heart_rate': 109.0}
+2025-01-31 20:39:26.466 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:26.466 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:26.466 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:26.466 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:31.465 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:31.465089', 'heart_rate': 110.0}
+2025-01-31 20:39:31.467 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:31.465089', 'heart_rate': 110.0}
+2025-01-31 20:39:31.467 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:31.468 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:31.468 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:31.468 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:36.467 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:36.466274', 'heart_rate': 111.0}
+2025-01-31 20:39:36.470 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:36.466274', 'heart_rate': 111.0}
+2025-01-31 20:39:36.470 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:36.470 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:36.471 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:36.471 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:41.469 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:41.468288', 'heart_rate': 112.0}
+2025-01-31 20:39:41.472 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:41.468288', 'heart_rate': 112.0}
+2025-01-31 20:39:41.472 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:41.473 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:41.473 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:41.473 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:46.470 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:46.470374', 'heart_rate': 113.0}
+2025-01-31 20:39:46.472 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:46.470374', 'heart_rate': 113.0}
+2025-01-31 20:39:46.472 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:46.472 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:46.473 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:46.473 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:51.472 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:51.471685', 'heart_rate': 114.0}
+2025-01-31 20:39:51.474 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:51.471685', 'heart_rate': 114.0}
+2025-01-31 20:39:51.475 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:51.475 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:51.475 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:51.475 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:39:56.473 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:39:56.473220', 'heart_rate': 115.0}
+2025-01-31 20:39:56.475 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:39:56.473220', 'heart_rate': 115.0}
+2025-01-31 20:39:56.475 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:39:56.476 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:39:56.476 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:39:56.476 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:01.475 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:01.474709', 'heart_rate': 116.0}
+2025-01-31 20:40:01.477 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:01.474709', 'heart_rate': 116.0}
+2025-01-31 20:40:01.477 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:01.478 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:01.478 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:01.478 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:06.476 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:06.476559', 'heart_rate': 117.0}
+2025-01-31 20:40:06.478 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:06.476559', 'heart_rate': 117.0}
+2025-01-31 20:40:06.479 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:06.479 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:06.479 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:06.479 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:11.477 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:11.477816', 'heart_rate': 118.0}
+2025-01-31 20:40:11.480 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:11.477816', 'heart_rate': 118.0}
+2025-01-31 20:40:11.480 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:11.480 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:11.481 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:11.481 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:16.480 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:16.479660', 'heart_rate': 119.0}
+2025-01-31 20:40:16.482 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:16.479660', 'heart_rate': 119.0}
+2025-01-31 20:40:16.482 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:16.482 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:16.483 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:16.483 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:21.481 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:21.481296', 'heart_rate': 120.0}
+2025-01-31 20:40:21.484 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:21.481296', 'heart_rate': 120.0}
+2025-01-31 20:40:21.485 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:21.485 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:21.485 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:21.485 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:26.484 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:26.483154', 'heart_rate': 121.0}
+2025-01-31 20:40:26.487 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:26.483154', 'heart_rate': 121.0}
+2025-01-31 20:40:26.487 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:26.487 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:26.487 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 121.0 BPM!
+2025-01-31 20:40:26.488 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:26.488 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:31.485 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:31.485166', 'heart_rate': 122.0}
+2025-01-31 20:40:31.489 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:31.485166', 'heart_rate': 122.0}
+2025-01-31 20:40:31.490 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:31.490 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:31.490 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 122.0 BPM!
+2025-01-31 20:40:31.491 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:31.491 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:36.487 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:36.487355', 'heart_rate': 123.0}
+2025-01-31 20:40:36.490 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:36.487355', 'heart_rate': 123.0}
+2025-01-31 20:40:36.490 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:36.490 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:36.490 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 123.0 BPM!
+2025-01-31 20:40:36.491 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:36.491 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:41.489 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:41.489335', 'heart_rate': 124.0}
+2025-01-31 20:40:41.491 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:41.489335', 'heart_rate': 124.0}
+2025-01-31 20:40:41.492 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:41.492 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:41.492 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 124.0 BPM!
+2025-01-31 20:40:41.492 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:41.492 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:46.492 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:46.491011', 'heart_rate': 125.0}
+2025-01-31 20:40:46.494 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:46.491011', 'heart_rate': 125.0}
+2025-01-31 20:40:46.495 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:46.495 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:46.495 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 125.0 BPM!
+2025-01-31 20:40:46.495 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:46.495 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:51.493 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:51.493078', 'heart_rate': 126.0}
+2025-01-31 20:40:51.496 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:51.493078', 'heart_rate': 126.0}
+2025-01-31 20:40:51.497 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:51.497 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:51.497 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 126.0 BPM!
+2025-01-31 20:40:51.497 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:51.497 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:40:56.495 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:40:56.494699', 'heart_rate': 127.0}
+2025-01-31 20:40:56.497 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:40:56.494699', 'heart_rate': 127.0}
+2025-01-31 20:40:56.497 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:40:56.497 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:40:56.497 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 127.0 BPM!
+2025-01-31 20:40:56.498 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:40:56.498 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:01.497 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:01.496767', 'heart_rate': 128.0}
+2025-01-31 20:41:01.499 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:01.496767', 'heart_rate': 128.0}
+2025-01-31 20:41:01.499 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:01.500 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:01.500 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 128.0 BPM!
+2025-01-31 20:41:01.500 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:01.500 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:06.498 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:06.498552', 'heart_rate': 129.0}
+2025-01-31 20:41:06.500 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:06.498552', 'heart_rate': 129.0}
+2025-01-31 20:41:06.500 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:06.500 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:06.500 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 129.0 BPM!
+2025-01-31 20:41:06.500 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:06.500 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:11.500 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:11.499891', 'heart_rate': 130.0}
+2025-01-31 20:41:11.504 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:11.499891', 'heart_rate': 130.0}
+2025-01-31 20:41:11.504 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:11.504 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:11.506 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 130.0 BPM!
+2025-01-31 20:41:11.506 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:11.506 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:16.503 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:16.503133', 'heart_rate': 131.0}
+2025-01-31 20:41:16.505 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:16.503133', 'heart_rate': 131.0}
+2025-01-31 20:41:16.506 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:16.506 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:16.506 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 131.0 BPM!
+2025-01-31 20:41:16.506 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:16.506 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:21.504 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:21.504617', 'heart_rate': 132.0}
+2025-01-31 20:41:21.507 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:21.504617', 'heart_rate': 132.0}
+2025-01-31 20:41:21.508 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:21.508 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:21.508 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 132.0 BPM!
+2025-01-31 20:41:21.508 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:21.509 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:26.507 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:26.507165', 'heart_rate': 133.0}
+2025-01-31 20:41:26.510 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:26.507165', 'heart_rate': 133.0}
+2025-01-31 20:41:26.511 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:26.511 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:26.511 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 133.0 BPM!
+2025-01-31 20:41:26.511 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:26.511 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:31.510 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:31.509539', 'heart_rate': 134.0}
+2025-01-31 20:41:31.513 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:31.509539', 'heart_rate': 134.0}
+2025-01-31 20:41:31.513 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:31.513 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:31.513 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 134.0 BPM!
+2025-01-31 20:41:31.513 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:31.514 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:36.511 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:36.511363', 'heart_rate': 135.0}
+2025-01-31 20:41:36.514 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:36.511363', 'heart_rate': 135.0}
+2025-01-31 20:41:36.514 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:36.514 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:36.515 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 135.0 BPM!
+2025-01-31 20:41:36.515 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:36.515 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:41.513 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:41.513077', 'heart_rate': 136.0}
+2025-01-31 20:41:41.516 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:41.513077', 'heart_rate': 136.0}
+2025-01-31 20:41:41.516 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:41.517 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:41.517 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 136.0 BPM!
+2025-01-31 20:41:41.517 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:41.517 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:46.515 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:46.515326', 'heart_rate': 137.0}
+2025-01-31 20:41:46.518 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:46.515326', 'heart_rate': 137.0}
+2025-01-31 20:41:46.518 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:46.519 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:46.519 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 137.0 BPM!
+2025-01-31 20:41:46.520 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:46.520 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:51.518 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:51.517614', 'heart_rate': 138.0}
+2025-01-31 20:41:51.520 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:51.517614', 'heart_rate': 138.0}
+2025-01-31 20:41:51.521 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:51.521 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:51.521 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 138.0 BPM!
+2025-01-31 20:41:51.521 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:51.521 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:41:56.519 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:41:56.519409', 'heart_rate': 139.0}
+2025-01-31 20:41:56.522 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:41:56.519409', 'heart_rate': 139.0}
+2025-01-31 20:41:56.522 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:41:56.523 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:41:56.523 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 139.0 BPM!
+2025-01-31 20:41:56.523 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:41:56.523 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:42:01.522 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:01.521111', 'heart_rate': 140.0}
+2025-01-31 20:42:01.526 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:01.521111', 'heart_rate': 140.0}
+2025-01-31 20:42:01.526 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:42:01.526 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:42:01.527 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 140.0 BPM!
+2025-01-31 20:42:01.527 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:42:01.527 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:42:06.524 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:06.523345', 'heart_rate': 141.0}
+2025-01-31 20:42:06.526 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:06.523345', 'heart_rate': 141.0}
+2025-01-31 20:42:06.526 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:42:06.527 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:42:06.527 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 141.0 BPM!
+2025-01-31 20:42:06.527 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:42:06.528 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:42:09.779 | WARNING  | __main__:main:222 - Consumer interrupted by user.
+2025-01-31 20:42:09.784 | INFO     | __main__:main:227 - Kafka consumer for topic 'heart_csv' closed.
+2025-01-31 20:42:11.525 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:11.525243', 'heart_rate': 142.0}
+2025-01-31 20:42:16.526 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:16.526651', 'heart_rate': 143.0}
+2025-01-31 20:42:21.529 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:21.528627', 'heart_rate': 144.0}
+2025-01-31 20:42:26.530 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:26.530229', 'heart_rate': 145.0}
+2025-01-31 20:42:31.531 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:31.531847', 'heart_rate': 146.0}
+2025-01-31 20:42:34.775 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:42:34.778 | INFO     | __main__:main:100 - START consumer.
+2025-01-31 20:42:34.778 | INFO     | __main__:get_kafka_topic:40 - Kafka topic: unknown_topic
+2025-01-31 20:42:34.778 | INFO     | __main__:get_kafka_consumer_group_id:47 - Kafka consumer group id: default_group
+2025-01-31 20:42:34.778 | INFO     | __main__:main:105 - Consumer: Topic 'unknown_topic' and group 'default_group'...
+2025-01-31 20:42:34.779 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:42:34.779 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='unknown_topic' and group ID='default_group'.
+2025-01-31 20:42:34.888 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-01-31 20:42:34.889 | INFO     | __main__:main:111 - Polling messages from topic 'unknown_topic'...
+2025-01-31 20:42:36.534 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:36.533095', 'heart_rate': 147.0}
+2025-01-31 20:42:41.534 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:41.534936', 'heart_rate': 148.0}
+2025-01-31 20:42:46.536 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:46.536162', 'heart_rate': 149.0}
+2025-01-31 20:42:51.537 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:42:51.537933', 'heart_rate': 150.0}
+2025-01-31 20:43:20.169 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:43:20.171 | INFO     | __main__:<module>:66 - Project root: C:\Users\adria\Projects\buzzline-03-vega
+2025-01-31 20:43:20.171 | INFO     | __main__:<module>:70 - Data folder: C:\Users\adria\Projects\buzzline-03-vega\data
+2025-01-31 20:43:20.171 | INFO     | __main__:<module>:74 - Data file: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:43:20.171 | INFO     | __main__:main:133 - START producer.
+2025-01-31 20:43:20.171 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
+2025-01-31 20:43:20.177 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:79 - Zookeeper is ready at localhost:2181.
+2025-01-31 20:43:20.177 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:43:20.496 | INFO     | utils.utils_producer:check_kafka_service_is_ready:98 - Kafka is ready. Brokers: {'throttle_time_ms': 0, 'brokers': [{'node_id': 1001, 'host': 'localhost', 'port': 9092, 'rack': None}], 'cluster_id': 'L4Jnq_nYTJuUJ4NJJfuPdg', 'controller_id': 1001}
+2025-01-31 20:43:20.496 | INFO     | __main__:get_kafka_topic:48 - Kafka topic: heart_csv
+2025-01-31 20:43:20.497 | INFO     | __main__:get_message_interval:55 - Message interval: 5 seconds
+2025-01-31 20:43:20.497 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:43:20.497 | INFO     | utils.utils_producer:create_kafka_producer:146 - Connecting to Kafka broker at localhost:9092...
+2025-01-31 20:43:20.602 | INFO     | utils.utils_producer:create_kafka_producer:151 - Kafka producer successfully created.
+2025-01-31 20:43:20.602 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:43:20.919 | INFO     | utils.utils_producer:create_kafka_topic:172 - Topic 'heart_csv' already exists. Clearing it out...
+2025-01-31 20:43:20.919 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:43:21.234 | ERROR    | utils.utils_producer:clear_kafka_topic:235 - Error managing retention for topic 'heart_csv': list indices must be integers or slices, not ConfigResource
+2025-01-31 20:43:21.235 | INFO     | __main__:main:156 - Kafka topic 'heart_csv' is ready.
+2025-01-31 20:43:21.235 | INFO     | __main__:main:162 - Starting message production to topic 'heart_csv'...
+2025-01-31 20:43:21.236 | INFO     | __main__:generate_messages:93 - Opening data file in read mode: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:43:21.236 | INFO     | __main__:generate_messages:95 - Reading data from file: C:\Users\adria\Projects\buzzline-03-vega\data\heart_rate.csv
+2025-01-31 20:43:21.237 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:43:21.236871', 'heart_rate': 72.0}
+2025-01-31 20:43:26.239 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:43:26.238241', 'heart_rate': 73.0}
+2025-01-31 20:43:31.205 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:43:31.208 | INFO     | __main__:main:100 - START consumer.
+2025-01-31 20:43:31.208 | INFO     | __main__:get_kafka_topic:40 - Kafka topic: unknown_topic
+2025-01-31 20:43:31.208 | INFO     | __main__:get_kafka_consumer_group_id:47 - Kafka consumer group id: default_group
+2025-01-31 20:43:31.208 | INFO     | __main__:main:105 - Consumer: Topic 'unknown_topic' and group 'default_group'...
+2025-01-31 20:43:31.208 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:43:31.208 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='unknown_topic' and group ID='default_group'.
+2025-01-31 20:43:31.240 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:43:31.240860', 'heart_rate': 75.0}
+2025-01-31 20:43:31.318 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-01-31 20:43:31.318 | INFO     | __main__:main:111 - Polling messages from topic 'unknown_topic'...
+2025-01-31 20:43:36.243 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:43:36.242066', 'heart_rate': 76.0}
+2025-01-31 20:43:41.244 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:43:41.244730', 'heart_rate': 77.0}
+2025-01-31 20:43:46.245 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:43:46.245630', 'heart_rate': 78.0}
+2025-01-31 20:43:51.247 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:43:51.247207', 'heart_rate': 79.0}
+2025-01-31 20:43:56.250 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:43:56.249268', 'heart_rate': 80.0}
+2025-01-31 20:44:01.252 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:01.252129', 'heart_rate': 81.0}
+2025-01-31 20:44:06.253 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:06.253315', 'heart_rate': 82.0}
+2025-01-31 20:44:08.469 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:44:08.471 | INFO     | __main__:main:200 - START consumer.
+2025-01-31 20:44:08.471 | INFO     | __main__:get_kafka_topic:45 - Kafka topic: heart_csv
+2025-01-31 20:44:08.471 | INFO     | __main__:get_kafka_consumer_group_id:52 - Kafka consumer group id: heart_group
+2025-01-31 20:44:08.471 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.471 | INFO     | __main__:main:206 - Consumer: Topic 'heart_csv' and group 'heart_group'...
+2025-01-31 20:44:08.471 | INFO     | __main__:main:207 - Rolling window size: 10
+2025-01-31 20:44:08.471 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:44:08.471 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='heart_csv' and group ID='heart_group'.
+2025-01-31 20:44:08.582 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-01-31 20:44:08.582 | INFO     | __main__:main:215 - Polling messages from topic 'heart_csv'...
+2025-01-31 20:44:08.912 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:11.525243', 'heart_rate': 142.0}
+2025-01-31 20:44:08.912 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.912 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.912 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 142.0 BPM!
+2025-01-31 20:44:08.912 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.913 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:16.526651', 'heart_rate': 143.0}
+2025-01-31 20:44:08.913 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.913 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.913 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 143.0 BPM!
+2025-01-31 20:44:08.913 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.914 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:21.528627', 'heart_rate': 144.0}
+2025-01-31 20:44:08.914 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.914 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.914 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 144.0 BPM!
+2025-01-31 20:44:08.914 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.915 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:26.530229', 'heart_rate': 145.0}
+2025-01-31 20:44:08.915 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.915 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.915 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 145.0 BPM!
+2025-01-31 20:44:08.915 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.916 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:31.531847', 'heart_rate': 146.0}
+2025-01-31 20:44:08.916 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.916 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.916 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 146.0 BPM!
+2025-01-31 20:44:08.916 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.916 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:36.533095', 'heart_rate': 147.0}
+2025-01-31 20:44:08.916 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.917 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.917 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 147.0 BPM!
+2025-01-31 20:44:08.917 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.918 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:41.534936', 'heart_rate': 148.0}
+2025-01-31 20:44:08.918 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.918 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.918 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 148.0 BPM!
+2025-01-31 20:44:08.919 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.920 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:46.536162', 'heart_rate': 149.0}
+2025-01-31 20:44:08.920 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.920 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.920 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 149.0 BPM!
+2025-01-31 20:44:08.920 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.921 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:42:51.537933', 'heart_rate': 150.0}
+2025-01-31 20:44:08.922 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.922 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.922 | WARNING  | __main__:alert_on_heart_rate_anomaly:132 - ALERT: High heart rate detected: 150.0 BPM!
+2025-01-31 20:44:08.922 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.923 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:43:21.236871', 'heart_rate': 72.0}
+2025-01-31 20:44:08.923 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.923 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.923 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.923 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.924 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:43:26.238241', 'heart_rate': 73.0}
+2025-01-31 20:44:08.924 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.925 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.925 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.925 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.926 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:43:31.240860', 'heart_rate': 75.0}
+2025-01-31 20:44:08.926 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.926 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.926 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.927 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.927 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:43:36.242066', 'heart_rate': 76.0}
+2025-01-31 20:44:08.927 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.927 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.927 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.928 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.928 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:43:41.244730', 'heart_rate': 77.0}
+2025-01-31 20:44:08.928 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.928 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.928 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.928 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.930 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:43:46.245630', 'heart_rate': 78.0}
+2025-01-31 20:44:08.930 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.930 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.930 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.930 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.931 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:43:51.247207', 'heart_rate': 79.0}
+2025-01-31 20:44:08.931 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.931 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.931 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.932 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.932 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:43:56.249268', 'heart_rate': 80.0}
+2025-01-31 20:44:08.932 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.933 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.933 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.933 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.934 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:01.252129', 'heart_rate': 81.0}
+2025-01-31 20:44:08.934 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.935 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.935 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.935 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:08.936 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:06.253315', 'heart_rate': 82.0}
+2025-01-31 20:44:08.936 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:08.936 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:08.936 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:08.936 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:11.254 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:11.254448', 'heart_rate': 83.0}
+2025-01-31 20:44:11.257 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:11.254448', 'heart_rate': 83.0}
+2025-01-31 20:44:11.258 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:11.258 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:11.258 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:11.258 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:16.256 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:16.256358', 'heart_rate': 84.0}
+2025-01-31 20:44:16.260 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:16.256358', 'heart_rate': 84.0}
+2025-01-31 20:44:16.260 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:16.260 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:16.260 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:16.260 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:21.257 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:21.257822', 'heart_rate': 85.0}
+2025-01-31 20:44:21.260 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:21.257822', 'heart_rate': 85.0}
+2025-01-31 20:44:21.260 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:21.260 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:21.260 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:21.261 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:26.260 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:26.259067', 'heart_rate': 86.0}
+2025-01-31 20:44:26.263 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:26.259067', 'heart_rate': 86.0}
+2025-01-31 20:44:26.263 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:26.263 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:26.264 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:26.264 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:31.264 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:31.262147', 'heart_rate': 87.0}
+2025-01-31 20:44:31.266 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:31.262147', 'heart_rate': 87.0}
+2025-01-31 20:44:31.267 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:31.267 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:31.267 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:31.268 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:36.265 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:36.264785', 'heart_rate': 88.0}
+2025-01-31 20:44:36.268 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:36.264785', 'heart_rate': 88.0}
+2025-01-31 20:44:36.269 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:36.269 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:36.269 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:36.270 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:41.267 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:41.266602', 'heart_rate': 89.0}
+2025-01-31 20:44:41.270 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:41.266602', 'heart_rate': 89.0}
+2025-01-31 20:44:41.271 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:41.271 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:41.272 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:41.272 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:46.270 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:46.269845', 'heart_rate': 90.0}
+2025-01-31 20:44:46.271 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:46.269845', 'heart_rate': 90.0}
+2025-01-31 20:44:46.272 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:46.272 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:46.272 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:46.272 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:51.271 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:51.271416', 'heart_rate': 91.0}
+2025-01-31 20:44:51.274 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:51.271416', 'heart_rate': 91.0}
+2025-01-31 20:44:51.274 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:51.274 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:51.276 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:51.276 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:44:56.274 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:44:56.273648', 'heart_rate': 92.0}
+2025-01-31 20:44:56.276 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:44:56.273648', 'heart_rate': 92.0}
+2025-01-31 20:44:56.277 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:44:56.277 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:44:56.277 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:44:56.277 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:45:01.277 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:01.276168', 'heart_rate': 93.0}
+2025-01-31 20:45:01.279 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:01.276168', 'heart_rate': 93.0}
+2025-01-31 20:45:01.280 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:01.280 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:01.280 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:01.280 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:45:06.278 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:06.278466', 'heart_rate': 94.0}
+2025-01-31 20:45:06.280 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:06.278466', 'heart_rate': 94.0}
+2025-01-31 20:45:06.280 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:06.281 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:06.281 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:06.281 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:45:11.279 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:11.279788', 'heart_rate': 95.0}
+2025-01-31 20:45:11.284 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:11.279788', 'heart_rate': 95.0}
+2025-01-31 20:45:11.284 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:11.284 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:11.284 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:11.285 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:45:11.748 | WARNING  | __main__:main:222 - Consumer interrupted by user.
+2025-01-31 20:45:11.753 | INFO     | __main__:main:227 - Kafka consumer for topic 'heart_csv' closed.
+2025-01-31 20:45:13.020 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-31 20:45:13.023 | INFO     | __main__:main:200 - START consumer.
+2025-01-31 20:45:13.023 | INFO     | __main__:get_kafka_topic:45 - Kafka topic: heart_csv
+2025-01-31 20:45:13.023 | INFO     | __main__:get_kafka_consumer_group_id:52 - Kafka consumer group id: heart_group
+2025-01-31 20:45:13.023 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:13.024 | INFO     | __main__:main:206 - Consumer: Topic 'heart_csv' and group 'heart_group'...
+2025-01-31 20:45:13.024 | INFO     | __main__:main:207 - Rolling window size: 10
+2025-01-31 20:45:13.024 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-31 20:45:13.024 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='heart_csv' and group ID='heart_group'.
+2025-01-31 20:45:13.136 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-01-31 20:45:13.136 | INFO     | __main__:main:215 - Polling messages from topic 'heart_csv'...
+2025-01-31 20:45:16.282 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:16.282031', 'heart_rate': 96.0}
+2025-01-31 20:45:16.284 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:16.282031', 'heart_rate': 96.0}
+2025-01-31 20:45:16.285 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:16.285 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:16.285 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:21.284 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:21.283129', 'heart_rate': 97.0}
+2025-01-31 20:45:21.285 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:21.283129', 'heart_rate': 97.0}
+2025-01-31 20:45:21.286 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:21.286 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:21.286 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:26.285 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:26.285170', 'heart_rate': 98.0}
+2025-01-31 20:45:26.288 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:26.285170', 'heart_rate': 98.0}
+2025-01-31 20:45:26.288 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:26.289 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:26.289 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:31.286 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:31.286741', 'heart_rate': 99.0}
+2025-01-31 20:45:31.290 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:31.286741', 'heart_rate': 99.0}
+2025-01-31 20:45:31.290 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:31.291 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:31.291 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:36.289 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:36.288931', 'heart_rate': 100.0}
+2025-01-31 20:45:36.291 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:36.288931', 'heart_rate': 100.0}
+2025-01-31 20:45:36.292 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:36.292 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:36.292 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:41.292 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:41.291020', 'heart_rate': 101.0}
+2025-01-31 20:45:41.294 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:41.291020', 'heart_rate': 101.0}
+2025-01-31 20:45:41.294 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:41.295 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:41.295 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:46.294 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:46.293863', 'heart_rate': 102.0}
+2025-01-31 20:45:46.298 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:46.293863', 'heart_rate': 102.0}
+2025-01-31 20:45:46.298 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:46.298 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:46.298 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:51.296 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:51.296003', 'heart_rate': 103.0}
+2025-01-31 20:45:51.299 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:51.296003', 'heart_rate': 103.0}
+2025-01-31 20:45:51.299 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:51.299 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:51.299 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:45:56.297 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:45:56.297600', 'heart_rate': 104.0}
+2025-01-31 20:45:56.300 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:45:56.297600', 'heart_rate': 104.0}
+2025-01-31 20:45:56.300 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:45:56.300 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:45:56.301 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:46:01.299 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:46:01.299208', 'heart_rate': 105.0}
+2025-01-31 20:46:01.302 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:46:01.299208', 'heart_rate': 105.0}
+2025-01-31 20:46:01.302 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:46:01.302 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:46:01.303 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:46:01.303 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:46:06.301 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:46:06.301691', 'heart_rate': 106.0}
+2025-01-31 20:46:06.304 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:46:06.301691', 'heart_rate': 106.0}
+2025-01-31 20:46:06.305 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:46:06.305 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:46:06.305 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:46:06.305 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:46:11.304 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:46:11.303550', 'heart_rate': 107.0}
+2025-01-31 20:46:11.306 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:46:11.303550', 'heart_rate': 107.0}
+2025-01-31 20:46:11.306 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:46:11.306 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:46:11.307 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:46:11.307 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:46:16.307 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:46:16.305738', 'heart_rate': 108.0}
+2025-01-31 20:46:16.308 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:46:16.305738', 'heart_rate': 108.0}
+2025-01-31 20:46:16.308 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:46:16.309 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:46:16.309 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:46:16.309 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:46:21.307 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:46:21.307833', 'heart_rate': 109.0}
+2025-01-31 20:46:21.309 | INFO     | __main__:process_message:162 - Processed JSON message: {'timestamp': '2025-02-01T02:46:21.307833', 'heart_rate': 109.0}
+2025-01-31 20:46:21.309 | INFO     | __main__:get_heart_rate_threshold_high:73 - High heart rate threshold: 120.0 BPM
+2025-01-31 20:46:21.309 | INFO     | __main__:get_heart_rate_threshold_low:80 - Low heart rate threshold: 40.0 BPM
+2025-01-31 20:46:21.309 | INFO     | __main__:get_rolling_window_size:66 - Rolling window size: 10
+2025-01-31 20:46:21.309 | INFO     | __main__:get_stall_threshold:59 - Max stall heart rate variation: 5.0 BPM
+2025-01-31 20:46:25.466 | WARNING  | __main__:main:222 - Consumer interrupted by user.
+2025-01-31 20:46:25.470 | INFO     | __main__:main:227 - Kafka consumer for topic 'heart_csv' closed.
+2025-01-31 20:46:26.308 | INFO     | __main__:main:166 - Sent message to topic 'heart_csv': {'timestamp': '2025-02-01T02:46:26.308997', 'heart_rate': 110.0}
+2025-01-31 20:46:27.703 | WARNING  | __main__:main:169 - Producer interrupted by user.
+2025-01-31 20:46:27.704 | INFO     | __main__:main:174 - Kafka producer closed.
+2025-01-31 20:46:27.705 | INFO     | __main__:main:176 - END producer.
