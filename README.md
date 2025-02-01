@@ -1,128 +1,114 @@
-# buzzline-03-case
+# buzzline-03-vega
 
-Streaming data does not have to be simple text.
-Many of us are familiar with streaming video content and audio (e.g. music) files. 
+Streaming data does not have to be simple text. Many of us are familiar with streaming video content and audio (e.g., music) files.
 
-Streaming data can be structured (e.g. csv files) or
-semi-structured (e.g. json data). 
+Streaming data can be structured (e.g., CSV files) or semi-structured (e.g., JSON data). In this project, we’ll work with two different types of data and use two different Kafka topic names. See the `.env` file for more details.
 
-We'll work with two different types of data, and so we'll use two different Kafka topic names. 
-See [.env](.env). 
+## Task 1: Use Tools from Module 1 and 2
+Before starting, ensure you have completed the setup tasks in:
+- [buzzline-01-case](https://github.com/denisecase/buzzline-01-case)
+- [buzzline-02-case](https://github.com/denisecase/buzzline-02-case)
 
+**Note:** Python 3.11 is required for this project.
 
-## Task 1. Use Tools from Module 1 and 2
+## Task 2: Copy This Example Project and Rename
+Once the tools are installed, copy or fork this project into your GitHub account and create your own version of the project to run and experiment with. Name it `buzzline-03-yourname` (replace `yourname` with something unique to you).
 
-Before starting, ensure you have completed the setup tasks in <https://github.com/denisecase/buzzline-01-case> and <https://github.com/denisecase/buzzline-02-case> first. 
-Python 3.11 is required. 
+For more details, follow the instructions in the [FORK-THIS-REPO.md](FORK-THIS-REPO.md).
 
-## Task 2. Copy This Example Project and Rename
+## Task 3: Manage Local Project Virtual Environment
+Follow the instructions in [MANAGE-VENV.md](MANAGE-VENV.md) to:
+- Create a `.venv`
+- Activate `.venv`
+- Install the required dependencies using `requirements.txt`
 
-Once the tools are installed, copy/fork this project into your GitHub account
-and create your own version of this project to run and experiment with.
-Name it `buzzline-03-yourname` where yourname is something unique to you.
-Follow the instructions in [FORK-THIS-REPO.md](https://github.com/denisecase/buzzline-01-case/blob/main/docs/FORK-THIS-REPO.md).
-    
+## Task 4: Start Zookeeper and Kafka (2 Terminals)
+If Zookeeper and Kafka are not already running, you'll need to restart them. Follow the instructions at [SETUP-KAFKA.md](SETUP-KAFKA.md) to:
+- Start the Zookeeper Service
+- Start Kafka
 
-## Task 3. Manage Local Project Virtual Environment
+## Task 5: Start the JSON Producer and Consumer
 
-Follow the instructions in [MANAGE-VENV.md](https://github.com/denisecase/buzzline-01-case/blob/main/docs/MANAGE-VENV.md) to:
-1. Create your .venv
-2. Activate .venv
-3. Install the required dependencies using requirements.txt.
+### JSON Kafka Producer
 
-## Task 4. Start Zookeeper and Kafka (2 Terminals)
+To start the **JSON producer**, which sends heart rate data in JSON format to Kafka, follow these steps:
 
-If Zookeeper and Kafka are not already running, you'll need to restart them.
-See instructions at [SETUP-KAFKA.md] to:
-
-1. Start Zookeeper Service ([link](https://github.com/denisecase/buzzline-02-case/blob/main/docs/SETUP-KAFKA.md#step-7-start-zookeeper-service-terminal-1))
-2. Start Kafka ([link](https://github.com/denisecase/buzzline-02-case/blob/main/docs/SETUP-KAFKA.md#step-8-start-kafka-terminal-2))
-
-## Task 5. Start a JSON Producer
-
-In VS Code, open a terminal.
-Use the commands below to activate .venv, and start the producer. 
+1. Open a terminal and activate the virtual environment.
+2. Run the following command to start the JSON producer:
 
 Windows:
 
 ```shell
 .venv\Scripts\activate
-py -m producers.json_producer_case
+py -m producers.json_producer_vega
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m producers.json_producer_case
+python3 -m producers.json_producer_vega
 ```
+This producer will push heart rate data to the Kafka topic specified in your .env file.
 
-What did we name the topic used with JSON data? 
-Hint: See the producer code and [.env](.env).
+### JSON Kafka Consumer
+The JSON consumer listens to the Kafka topic and processes the incoming heart rate data in real time. To run the JSON consumer:
 
-## Task 6. Start a JSON Consumer
-
-Consumers process streaming data in real time.
-
-In VS Code, open a NEW terminal in your root project folder. 
-Use the commands below to activate .venv, and start the consumer. 
+1. Open a new terminal and activate the virtual environment.
+2. Run the following command to start the JSON consumer:
 
 Windows:
+
 ```shell
 .venv\Scripts\activate
-py -m consumers.json_consumer_case
+py -m producers.json_consumer_vega
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m consumers.json_consumer_case
+python3 -m producers.json_consumer_vega
 ```
 
-What did we name the topic used with JSON data? 
-Hint: See the consumer code and [.env](.env).
+## Task 6: Start the CSV Producer and Consumer
 
-## Task 7. Start a CSV Producer
+### CSV Kafka Producer
+To start the CSV producer, which sends heart rate data in CSV format to Kafka, follow these steps:
 
-Follow a similar process to start the csv producer. 
-You will need to:
-1. Open a new terminal. 
-2. Activate your .venv.
-3. Know the command that works on your machine to execute python (e.g. py or python3).
-4. Know how to use the -m (module flag to run your file as a module).
-5. Know the full name of the module you want to run. Hint: Look in the producers folder.
+1. Open a terminal and activate the virtual environment.
+2. Run the following command to start the CSV producer:
 
-What did we name the topic used with csv data? 
-Hint: See the producer code and [.env](.env).
+Windows:
 
-## Task 8. Start a CSV Consumer
+```shell
+.venv\Scripts\activate
+py -m producers.csv_producer_vega
+```
 
-Follow a similar process to start the csv consumer. 
-You will need to:
-1. Open a new terminal. 
-2. Activate your .venv.
-3. Know the command that works on your machine to execute python (e.g. py or python3).
-4. Know how to use the -m (module flag to run your file as a module).
-5. Know the full name of the module you want to run. Hint: Look in the consumers folder.
+Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m producers.csv_producer_vega
+```
+This producer sends heart rate data to Kafka in CSV format.
 
-What did we name the topic used with csv data? 
-Hint: See the consumer code and [.env](.env).
+### CSV Kafka Consumer
+To start the CSV consumer, which listens to the Kafka topic and processes the CSV data, follow these steps:
 
-## About the Smart Smoker (CSV Example)
+1. Open a new terminal and activate the virtual environment.
+2. Run the following command to start the CSV consumer:
 
-A food stall occurs when the internal temperature of food plateaus or 
-stops rising during slow cooking, typically between 150°F and 170°F. 
-This happens due to evaporative cooling as moisture escapes from the 
-surface of the food. The plateau can last for hours, requiring 
-adjustments like wrapping the food or raising the cooking temperature to 
-overcome it. Cooking should continue until the food reaches the 
-appropriate internal temperature for safe and proper doneness.
+Windows:
 
-The producer simulates a smart food thermometer, sending a temperature 
-reading every 15 seconds. The consumer monitors these messages and 
-maintains a time window of the last 5 readings. 
-If the temperature varies by less than 2 degrees, the consumer alerts 
-the BBQ master that a stall has been detected. This time window helps 
-capture recent trends while filtering out minor fluctuations.
+```shell
+.venv\Scripts\activate
+py -m producers.csv_consumer_vega
+```
+
+Mac/Linux:
+```zsh
+source .venv/bin/activate
+python3 -m producers.csv_consumer_vega
+```
 
 ## Later Work Sessions
 When resuming work on this project:
