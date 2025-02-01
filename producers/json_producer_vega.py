@@ -1,13 +1,13 @@
 """
-json_producer_case.py
+json_producer_vega.py
 
 Stream JSON data to a Kafka topic.
 
 Example JSON message
-{"message": "I love Python!", "author": "Eve"}
+{"message": "Cats can rotate their ears 180 degrees to listen in all directions.", "author": "Ivy"}
 
 Example serialized to Kafka message
-"{\"message\": \"I love Python!\", \"author\": \"Eve\"}"
+"{\"message\": \"Cats can rotate their ears 180 degrees to listen in all directions.\", \"author\": \"Ivy\"}"
 
 """
 
@@ -46,14 +46,14 @@ load_dotenv()
 
 def get_kafka_topic() -> str:
     """Fetch Kafka topic from environment or use default."""
-    topic = os.getenv("BUZZ_TOPIC", "unknown_topic")
+    topic = os.getenv("CATS_TOPIC", "unknown_topic")
     logger.info(f"Kafka topic: {topic}")
     return topic
 
 
 def get_message_interval() -> int:
     """Fetch message interval from environment or use default."""
-    interval = int(os.getenv("BUZZ_INTERVAL_SECONDS", 1))
+    interval = int(os.getenv("CATS_INTERVAL_SECONDS", 1))
     logger.info(f"Message interval: {interval} seconds")
     return interval
 
@@ -72,7 +72,7 @@ DATA_FOLDER: pathlib.Path = PROJECT_ROOT.joinpath("data")
 logger.info(f"Data folder: {DATA_FOLDER}")
 
 # Set the name of the data file
-DATA_FILE: pathlib.Path = DATA_FOLDER.joinpath("buzz.json")
+DATA_FILE: pathlib.Path = DATA_FOLDER.joinpath("cats.json")
 logger.info(f"Data file: {DATA_FILE}")
 
 #####################################
@@ -105,9 +105,9 @@ def generate_messages(file_path: pathlib.Path):
                     )
 
                 # Iterate over the entries in the JSON file
-                for buzz_entry in json_data:
-                    logger.debug(f"Generated JSON: {buzz_entry}")
-                    yield buzz_entry
+                for cats_entry in json_data:
+                    logger.debug(f"Generated JSON: {cats_entry}")
+                    yield cats_entry
         except FileNotFoundError:
             logger.error(f"File not found: {file_path}. Exiting.")
             sys.exit(1)
