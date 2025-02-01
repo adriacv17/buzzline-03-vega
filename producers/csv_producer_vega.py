@@ -44,14 +44,14 @@ load_dotenv()
 
 def get_kafka_topic() -> str:
     """Fetch Kafka topic from environment or use default."""
-    topic = os.getenv("SMOKER_TOPIC", "unknown_topic")
+    topic = os.getenv("HEART_TOPIC", "unknown_topic")
     logger.info(f"Kafka topic: {topic}")
     return topic
 
 
 def get_message_interval() -> int:
     """Fetch message interval from environment or use default."""
-    interval = int(os.getenv("SMOKER_INTERVAL_SECONDS", 1))
+    interval = int(os.getenv("HEART_INTERVAL_SECONDS", 1))
     logger.info(f"Message interval: {interval} seconds")
     return interval
 
@@ -70,7 +70,7 @@ DATA_FOLDER = PROJECT_ROOT.joinpath("data")
 logger.info(f"Data folder: {DATA_FOLDER}")
 
 # Set the name of the data file
-DATA_FILE = DATA_FOLDER.joinpath("smoker_temps.csv")
+DATA_FILE = DATA_FOLDER.joinpath("heart_rate.csv")
 logger.info(f"Data file: {DATA_FILE}")
 
 #####################################
@@ -80,13 +80,13 @@ logger.info(f"Data file: {DATA_FILE}")
 
 def generate_messages(file_path: pathlib.Path):
     """
-    Read from a csv file and yield records one by one, continuously.
+    Read from a CSV file and yield heart rate records one by one, continuously.
 
     Args:
         file_path (pathlib.Path): Path to the CSV file.
 
     Yields:
-        str: CSV row formatted as a string.
+        str: Heart rate record formatted as a string.
     """
     while True:
         try:
@@ -96,18 +96,18 @@ def generate_messages(file_path: pathlib.Path):
 
                 csv_reader = csv.DictReader(csv_file)
                 for row in csv_reader:
-                    # Ensure required fields are present
-                    if "temperature" not in row:
-                        logger.error(f"Missing 'temperature' column in row: {row}")
+                    # Ensure 'heart_rate' is present in the row
+                    if "heart_rate" not in row:
+                        logger.error(f"Missing 'heart_rate' column in row: {row}")
                         continue
 
-                    # Generate a timestamp and prepare the message
+                    # Generate a timestamp and prepare the heart rate message
                     current_timestamp = datetime.utcnow().isoformat()
                     message = {
                         "timestamp": current_timestamp,
-                        "temperature": float(row["temperature"]),
+                        "heart_rate": float(row["heart_rate"]),
                     }
-                    logger.debug(f"Generated message: {message}")
+                    logger.debug(f"Generated heart rate message: {message}")
                     yield message
         except FileNotFoundError:
             logger.error(f"File not found: {file_path}. Exiting.")
@@ -128,13 +128,12 @@ def main():
 
     - Reads the Kafka topic name from an environment variable.
     - Creates a Kafka producer using the `create_kafka_producer` utility.
-    - Streams messages to the Kafka topic.
+    - Streams heart rate messages to the Kafka topic.
     """
-
     logger.info("START producer.")
     verify_services()
 
-    # fetch .env content
+    # Fetch .env content
     topic = get_kafka_topic()
     interval_secs = get_message_interval()
 
@@ -159,12 +158,12 @@ def main():
         logger.error(f"Failed to create or verify topic '{topic}': {e}")
         sys.exit(1)
 
-    # Generate and send messages
+    # Generate and send heart rate messages
     logger.info(f"Starting message production to topic '{topic}'...")
     try:
-        for csv_message in generate_messages(DATA_FILE):
-            producer.send(topic, value=csv_message)
-            logger.info(f"Sent message to topic '{topic}': {csv_message}")
+        for heart_rate_message in generate_messages(DATA_FILE):
+            producer.send(topic, value=heart_rate_message)
+            logger.info(f"Sent message to topic '{topic}': {heart_rate_message}")
             time.sleep(interval_secs)
     except KeyboardInterrupt:
         logger.warning("Producer interrupted by user.")
@@ -175,6 +174,7 @@ def main():
         logger.info("Kafka producer closed.")
 
     logger.info("END producer.")
+
 
 
 #####################################
